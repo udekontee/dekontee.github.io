@@ -52,7 +52,7 @@ Hi! I am **Dekontee Kun**, an Atlanta-based Software Engineering & Data Analytic
 
 ## Professional Links & Resume
 
-- **Resume:** [Download Resume PDF](RESUME.pdf)
+- **Resume:** [Download Resume PDF](RESUMES.pdf)
 - **LinkedIn:** [linkedin.com/in/udkun](https://linkedin.com/in/udkun)
 - **GitHub:** [github.com/udekontee](https://github.com/udekontee)
 - **Medium:** [medium.com/@udekontee](https://medium.com/@udekontee)
