@@ -1,0 +1,15 @@
+---
+title: "Data Analytics & Data Science Portfolio"
+---
+
+Welcome to my portfolio! I specialize in data analysis, machine learning, and data visualization, transforming complex datasets into actionable business insights.
+
+## Core Capabilities
+
+* **Data Analysis & Visualization:** Python (Pandas, Matplotlib, Seaborn), SQL, Tableau / Power BI
+* **Machine Learning:** Predictive modeling, classification, regression, and model evaluation
+* **Data Engineering & Workflow:** Git/GitHub, Quarto, reproducible analytical workflows
+
+## Featured Work
+
+Navigate to the [Projects](projects.qmd) page to explore my case studies, code, and interactive visual outputs.

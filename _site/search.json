@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analytics & Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my portfolio! I specialize in data analysis, machine learning, and data visualization, transforming complex datasets into actionable business insights."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "An analysis demonstrating data cleaning, summary statistics, and visualization in Python.\nimport pandas as pd import matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "projects.html#project-1-exploratory-data-analysis-visualization",
+    "href": "projects.html#project-1-exploratory-data-analysis-visualization",
+    "title": "Projects",
+    "section": "",
+    "text": "An analysis demonstrating data cleaning, summary statistics, and visualization in Python.\nimport pandas as pd import matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "index.html#core-capabilities",
+    "href": "index.html#core-capabilities",
+    "title": "Data Analytics & Data Science Portfolio",
+    "section": "Core Capabilities",
+    "text": "Core Capabilities\n\nData Analysis & Visualization: Python (Pandas, Matplotlib, Seaborn), SQL, Tableau / Power BI\nMachine Learning: Predictive modeling, classification, regression, and model evaluation\nData Engineering & Workflow: Git/GitHub, Quarto, reproducible analytical workflows"
+  },
+  {
+    "objectID": "index.html#featured-work",
+    "href": "index.html#featured-work",
+    "title": "Data Analytics & Data Science Portfolio",
+    "section": "Featured Work",
+    "text": "Featured Work\nNavigate to the Projects page to explore my case studies, code, and interactive visual outputs."
+  }
+]

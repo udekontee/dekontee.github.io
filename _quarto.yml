@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Data Analytics/Science Portfolio"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/your-username
+      - icon: linkedin
+        href: https://linkedin.com/in/your-profile
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

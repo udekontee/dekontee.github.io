@@ -1,0 +1,34 @@
+---
+title: "Projects"
+format: html
+---
+
+## Featured Case Studies
+
+### 1. [GA4 Ecommerce Analytics & Purchase Prediction](ga4-ecommerce-prediction.qmd)
+
+An end-to-end analysis using **Google BigQuery, SQL, Python, statistical testing (Chi-square/Cramér's V), and machine learning** to analyze ecommerce funnel drop-offs and predict future purchase conversion.
+
+* **Key Outcome:** Logistic Regression achieved **0.888 ROC-AUC** for lead prioritization while eliminating target leakage through time-based feature splitting.
+* [Read Full Case Study →](ga4-ecommerce-prediction.qmd)
+
+---
+
+## Interactive Data Visualizations
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Funnel Stage": ["View Item", "Add to Cart", "Begin Checkout", "Purchase"],
+    "Events": [386068, 58543, 38757, 5692]
+}
+df = pd.DataFrame(data)
+
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.bar(df["Funnel Stage"], df["Events"], color="#2b5c8f")
+ax.set_ylabel("Event Count")
+ax.set_title("GA4 Ecommerce Conversion Funnel")
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,79 @@
+---
+title: "GA4 Ecommerce Analytics & Purchase Prediction"
+description: "End-to-end GA4 ecommerce analysis aligning with the 6-step Analytics Process using BigQuery, SQL, Python, and Machine Learning."
+author: "U Dekontee Kun"
+date: "2026-10-07"
+categories: [SQL, BigQuery, Python, Machine Learning, Analytics Process]
+toc: true
+---
+
+## Executive Summary (For Recruiters & Hiring Managers)
+
+* **Business Challenge:** Identify where Google Merchandise Store visitors drop off in the conversion funnel and predict future high-intent purchasers.
+* **Core Approach:** Processed 4.29M events in BigQuery, performed statistical hypothesis testing, and built machine learning models using time-based windowing to prevent data leakage.
+* **Primary Impact:** Logistic Regression achieved an **0.888 ROC-AUC**, successfully identifying **63% of future purchasers** to optimize targeted marketing spend.
+
+---
+
+## 1. Ask Question (Business Problem & Goals)
+
+This project addresses key business questions to improve ecommerce conversion performance:
+
+1. **Funnel Performance:** Where are the primary conversion drop-offs between item view, cart addition, checkout, and purchase?
+2. **Behavioral Impact:** Do purchase rates differ significantly across device categories or traffic channels?
+3. **Engagement Dynamics:** How does engagement intensity differ between buyers and non-buyers?
+4. **Predictive Modeling:** Can past behavioral features accurately predict future purchases without target leakage?
+
+---
+
+## 2. Get Data (Data Source & Storage)
+
+* **Source Dataset:** `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*` hosted on **Google BigQuery**.
+* **Scope:** 4,295,584 raw ecommerce events across 270,154 unique users spanning 92 days (Nov 1, 2020 – Jan 31, 2021).
+* **Environment:** Executed SQL queries via **Google BigQuery** and conducted downstream analysis in **Google Colab (Python)**.
+
+---
+
+## 3. Investigate Data (Exploratory Analysis & Testing)
+
+### Conversion Funnel Breakdown
+
+| Funnel Stage | Event Count | Stage Progression | Drop-off Focus |
+|---|---:|---|---|
+| **View Item** | 386,068 | Baseline | Highest volume stage |
+| **Add to Cart** | 58,543 | 15.1% of views | **Major conversion drop-off point** |
+| **Begin Checkout** | 38,757 | 66.2% of cart additions | Moderate retention |
+| **Purchase** | 5,692 | 14.6% of checkouts | Final purchase conversion |
+
+### Statistical Hypothesis Testing
+
+* **Device Category vs. Purchase:** A Chi-Square Test of Independence yielded $p = 0.0130$. However, Cramér's V was $0.0047$, demonstrating that device type has a **negligible practical effect** on conversion.
+* **Traffic Source vs. Purchase:** Yielded $p \approx 4.51 \times 10^{-83}$ and Cramér's V of $0.0318$, indicating traffic source is a stronger driver than device type, though overall association remains moderate.
+
+---
+
+## 4. Prepare Data (Feature Engineering & Leakage Prevention)
+
+To build a valid predictive model without data leakage, behavioral metrics and target outcomes were strictly partitioned across non-overlapping calendar windows:
+
+* **Feature Period (Nov 1 – Dec 30, 2020):** Engineered user-level aggregates including engagement event count, page views, and product views.
+* **Prediction Period (Dec 31, 2020 – Jan 31, 2021):** Evaluated binary purchase outcome (`1` if purchased in January, `0` otherwise).
+* **Imbalance Management:** Out of 176,942 active users during the feature window, only **258 purchased in the prediction window (0.15% target class rate)**. Class weighting was applied to manage this imbalance.
+
+---
+
+## 5. Analyze Data (Machine Learning Modeling)
+
+Two binary classification algorithms were evaluated on the imbalanced dataset:
+
+| Model Architecture | Precision | Recall | F1-Score | ROC-AUC | PR-AUC |
+|---|---:|---:|---:|---:|---:|
+| **Logistic Regression (Class-Weighted)** | **0.0118** | **0.6346** | **0.0231** | **0.8880** | **0.0197** |
+| Random Forest Classifier | 0.0006 | 0.0192 | 0.0012 | 0.3472 | 0.0013 |
+
+### Feature Importance (Standardized Coefficients)
+
+```text
+Engagement Events : +1.7106 (Odds Ratio: 5.53)  <-- Primary Positive Predictor
+Product Views     : +0.4622 (Odds Ratio: 1.59)
+Page Views        : -0.6491 (Odds Ratio: 0.52)
