@@ -72,9 +72,51 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "Hi! I am Dekontee Kun, an Atlanta-based Software Engineering & Data Analytics Professional holding an M.S. in Information Systems Management. I specialize in building scalable data pipelines, statistical models, and analytical tools using Python, SQL, BigQuery, and JavaScript."
+  },
+  {
+    "objectID": "about.html#overview",
+    "href": "about.html#overview",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi! I am Dekontee Kun, an Atlanta-based Software Engineering & Data Analytics Professional holding an M.S. in Information Systems Management. I specialize in building scalable data pipelines, statistical models, and analytical tools using Python, SQL, BigQuery, and JavaScript."
+  },
+  {
+    "objectID": "about.html#certifications-credentials",
+    "href": "about.html#certifications-credentials",
+    "title": "About Me",
+    "section": "Certifications & Credentials",
+    "text": "Certifications & Credentials\n\nData Science, AI & Machine Learning\n\nData Science Application – WorldQuant University\nData Science Modeling – WorldQuant University\nBuild RAG Applications & Develop Generative AI Applications – IBM / Coursera\nGenerative AI Essentials & Artificial Intelligence Fundamentals – IBM / Coursera\n\n\n\nData Analytics & Business Intelligence\n\nGoogle Data Analytics Professional Certificate (v2) – Google / Coursera\nGoogle Business Intelligence Certificate – Google / Coursera\nTableau Visualization Certificate – Tableau\nData Analytics Essentials – Cisco Networking Academy\n\n\n\nSoftware Engineering & Cloud\n\nSoftware Engineering Essentials – IBM / Coursera\nJavaScript Essentials 1 & 2 (Intermediate OOP) – Cisco Networking Academy\nGoogle Project Management Professional Certificate (v2) – Google / Coursera\nAWS Certified Cloud Practitioner – Amazon Web Services\n\n👉 View & Verify All Digital Badges on Credly"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\n\nMaster of Science in Information Systems Management (Project Management)\nDeVry University, Keller Graduate School of Management\nBachelor of Public Administration (Economic Development)\nAfrican Methodist Episcopal University"
+  },
+  {
+    "objectID": "about.html#core-technical-skills",
+    "href": "about.html#core-technical-skills",
+    "title": "About Me",
+    "section": "Core Technical Skills",
+    "text": "Core Technical Skills\n\nProgramming & Analysis: Python (OOP, Pandas, Scikit-learn), JavaScript, SQL, BigQuery, HTML/CSS\nData Engineering & Analytics: Data Cleaning, Feature Engineering, EDA, Statistical Testing (Chi-Square, Cramér’s V)\nVisualization & BI: Tableau, Power BI, Matplotlib, Dashboard Automation\nWorkflow & Infrastructure: Git, GitHub, Quarto, Jupyter Notebook, AWS Cloud, Unit Testing"
+  },
+  {
+    "objectID": "about.html#professional-links-resume",
+    "href": "about.html#professional-links-resume",
+    "title": "About Me",
+    "section": "Professional Links & Resume",
+    "text": "Professional Links & Resume\n\nResume: Download Resume PDF\nLinkedIn: linkedin.com/in/udkun\nGitHub: github.com/udekontee\nMedium: medium.com/@udekontee"
+  },
+  {
+    "objectID": "about.html#my-approach",
+    "href": "about.html#my-approach",
+    "title": "About Me",
+    "section": "My Approach",
+    "text": "My Approach\nI structure my analytics work around the Data Analytics Process: framing business problems, engineering features from high-volume datasets (such as 10M+ operational records), building predictive models, and translating complex metrics into actionable insights for leadership."
   },
   {
     "objectID": "index.html",
