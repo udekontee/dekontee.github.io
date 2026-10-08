@@ -4,8 +4,13 @@ title: "About Me"
 
 ## Overview
 
-Hi! I am **Dekontee Kun**, an Atlanta-based Software Engineering & Data Analytics Professional holding an M.S. in Information Systems Management. I specialize in building scalable data pipelines, statistical models, and analytical tools using Python, SQL, BigQuery, and JavaScript.
+## Overview
 
+Hi! I am **Dekontee Kun**, an Atlanta-based Data Analytics & Software Engineering Professional holding an M.S. in Information Systems Management. 
+
+I am actively seeking **Junior Data Scientist**, **Entry-Level Data Analyst**, or **Associate Analytics Specialist** roles where I can leverage my expertise in building scalable data pipelines, feature engineering, statistical modeling, and dashboard development using Python, SQL, BigQuery, and JavaScript.
+
+Through hands-on, end-to-end projects—such as engineering machine learning pipelines across 4M+ records and analyzing multi-million row operational datasets—I apply the structured Data Analytics Process to convert complex data into actionable business value.
 ---
 
 ## Certifications & Credentials
