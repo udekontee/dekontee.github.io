@@ -1,10 +1,73 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dekontee.github.io",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "An end-to-end analysis using Google BigQuery, SQL, Python, statistical testing (Chi-square/Cramér’s V), and machine learning to analyze ecommerce funnel drop-offs and predict future purchase conversion.\n\nKey Outcome: Logistic Regression achieved 0.888 ROC-AUC for lead prioritization while eliminating target leakage through time-based feature splitting.\nRead Full Case Study →"
+  },
+  {
+    "objectID": "projects.html#featured-case-studies",
+    "href": "projects.html#featured-case-studies",
+    "title": "Projects",
+    "section": "",
+    "text": "An end-to-end analysis using Google BigQuery, SQL, Python, statistical testing (Chi-square/Cramér’s V), and machine learning to analyze ecommerce funnel drop-offs and predict future purchase conversion.\n\nKey Outcome: Logistic Regression achieved 0.888 ROC-AUC for lead prioritization while eliminating target leakage through time-based feature splitting.\nRead Full Case Study →"
+  },
+  {
+    "objectID": "projects.html#interactive-data-visualizations",
+    "href": "projects.html#interactive-data-visualizations",
+    "title": "Projects",
+    "section": "Interactive Data Visualizations",
+    "text": "Interactive Data Visualizations\nimport pandas as pd import matplotlib.pyplot as plt\ndata = { “Funnel Stage”: [“View Item”, “Add to Cart”, “Begin Checkout”, “Purchase”], “Events”: [386068, 58543, 38757, 5692] } df = pd.DataFrame(data)\nfig, ax = plt.subplots(figsize=(7, 4)) ax.bar(df[“Funnel Stage”], df[“Events”], color=“#2b5c8f”) ax.set_ylabel(“Event Count”) ax.set_title(“GA4 Ecommerce Conversion Funnel”) plt.tight_layout() plt.show()"
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html",
+    "href": "ga4-ecommerce-prediction.html",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "",
+    "text": "Business Challenge: Identify where Google Merchandise Store visitors drop off in the conversion funnel and predict future high-intent purchasers.\nCore Approach: Processed 4.29M events in BigQuery, performed statistical hypothesis testing, and built machine learning models using time-based windowing to prevent data leakage.\nPrimary Impact: Logistic Regression achieved an 0.888 ROC-AUC, successfully identifying 63% of future purchasers to optimize targeted marketing spend."
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html#executive-summary-for-recruiters-hiring-managers",
+    "href": "ga4-ecommerce-prediction.html#executive-summary-for-recruiters-hiring-managers",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "",
+    "text": "Business Challenge: Identify where Google Merchandise Store visitors drop off in the conversion funnel and predict future high-intent purchasers.\nCore Approach: Processed 4.29M events in BigQuery, performed statistical hypothesis testing, and built machine learning models using time-based windowing to prevent data leakage.\nPrimary Impact: Logistic Regression achieved an 0.888 ROC-AUC, successfully identifying 63% of future purchasers to optimize targeted marketing spend."
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html#ask-question-business-problem-goals",
+    "href": "ga4-ecommerce-prediction.html#ask-question-business-problem-goals",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "1. Ask Question (Business Problem & Goals)",
+    "text": "1. Ask Question (Business Problem & Goals)\nThis project addresses key business questions to improve ecommerce conversion performance:\n\nFunnel Performance: Where are the primary conversion drop-offs between item view, cart addition, checkout, and purchase?\nBehavioral Impact: Do purchase rates differ significantly across device categories or traffic channels?\nEngagement Dynamics: How does engagement intensity differ between buyers and non-buyers?\nPredictive Modeling: Can past behavioral features accurately predict future purchases without target leakage?"
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html#get-data-data-source-storage",
+    "href": "ga4-ecommerce-prediction.html#get-data-data-source-storage",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "2. Get Data (Data Source & Storage)",
+    "text": "2. Get Data (Data Source & Storage)\n\nSource Dataset: bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_* hosted on Google BigQuery.\nScope: 4,295,584 raw ecommerce events across 270,154 unique users spanning 92 days (Nov 1, 2020 – Jan 31, 2021).\nEnvironment: Executed SQL queries via Google BigQuery and conducted downstream analysis in Google Colab (Python)."
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html#investigate-data-exploratory-analysis-testing",
+    "href": "ga4-ecommerce-prediction.html#investigate-data-exploratory-analysis-testing",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "3. Investigate Data (Exploratory Analysis & Testing)",
+    "text": "3. Investigate Data (Exploratory Analysis & Testing)\n\nConversion Funnel Breakdown\n\n\n\n\n\n\n\n\n\nFunnel Stage\nEvent Count\nStage Progression\nDrop-off Focus\n\n\n\n\nView Item\n386,068\nBaseline\nHighest volume stage\n\n\nAdd to Cart\n58,543\n15.1% of views\nMajor conversion drop-off point\n\n\nBegin Checkout\n38,757\n66.2% of cart additions\nModerate retention\n\n\nPurchase\n5,692\n14.6% of checkouts\nFinal purchase conversion\n\n\n\n\n\nStatistical Hypothesis Testing\n\nDevice Category vs. Purchase: A Chi-Square Test of Independence yielded \\(p = 0.0130\\). However, Cramér’s V was \\(0.0047\\), demonstrating that device type has a negligible practical effect on conversion.\nTraffic Source vs. Purchase: Yielded \\(p \\approx 4.51 \\times 10^{-83}\\) and Cramér’s V of \\(0.0318\\), indicating traffic source is a stronger driver than device type, though overall association remains moderate."
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html#prepare-data-feature-engineering-leakage-prevention",
+    "href": "ga4-ecommerce-prediction.html#prepare-data-feature-engineering-leakage-prevention",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "4. Prepare Data (Feature Engineering & Leakage Prevention)",
+    "text": "4. Prepare Data (Feature Engineering & Leakage Prevention)\nTo build a valid predictive model without data leakage, behavioral metrics and target outcomes were strictly partitioned across non-overlapping calendar windows:\n\nFeature Period (Nov 1 – Dec 30, 2020): Engineered user-level aggregates including engagement event count, page views, and product views.\nPrediction Period (Dec 31, 2020 – Jan 31, 2021): Evaluated binary purchase outcome (1 if purchased in January, 0 otherwise).\nImbalance Management: Out of 176,942 active users during the feature window, only 258 purchased in the prediction window (0.15% target class rate). Class weighting was applied to manage this imbalance."
+  },
+  {
+    "objectID": "ga4-ecommerce-prediction.html#analyze-data-machine-learning-modeling",
+    "href": "ga4-ecommerce-prediction.html#analyze-data-machine-learning-modeling",
+    "title": "GA4 Ecommerce Analytics & Purchase Prediction",
+    "section": "5. Analyze Data (Machine Learning Modeling)",
+    "text": "5. Analyze Data (Machine Learning Modeling)\nTwo binary classification algorithms were evaluated on the imbalanced dataset:\n\n\n\n\n\n\n\n\n\n\n\nModel Architecture\nPrecision\nRecall\nF1-Score\nROC-AUC\nPR-AUC\n\n\n\n\nLogistic Regression (Class-Weighted)\n0.0118\n0.6346\n0.0231\n0.8880\n0.0197\n\n\nRandom Forest Classifier\n0.0006\n0.0192\n0.0012\n0.3472\n0.0013\n\n\n\n\nFeature Importance (Standardized Coefficients)\n```text Engagement Events : +1.7106 (Odds Ratio: 5.53) &lt;– Primary Positive Predictor Product Views : +0.4622 (Odds Ratio: 1.59) Page Views : -0.6491 (Odds Ratio: 0.52)"
   },
   {
     "objectID": "about.html",
@@ -12,5 +75,26 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analytics & Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my portfolio! I specialize in data analysis, machine learning, and data visualization, transforming complex datasets into actionable business insights."
+  },
+  {
+    "objectID": "index.html#core-capabilities",
+    "href": "index.html#core-capabilities",
+    "title": "Data Analytics & Data Science Portfolio",
+    "section": "Core Capabilities",
+    "text": "Core Capabilities\n\nData Analysis & Visualization: Python (Pandas, Matplotlib, Seaborn), SQL, Tableau / Power BI\nMachine Learning: Predictive modeling, classification, regression, and model evaluation\nData Engineering & Workflow: Git/GitHub, Quarto, reproducible analytical workflows"
+  },
+  {
+    "objectID": "index.html#featured-work",
+    "href": "index.html#featured-work",
+    "title": "Data Analytics & Data Science Portfolio",
+    "section": "Featured Work",
+    "text": "Featured Work\nNavigate to the Projects page to explore my case studies, code, and interactive visual outputs."
   }
 ]

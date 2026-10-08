@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Analytics &amp; Data Science Portfolio – Data Analytics/Science Portfolio</title>
+<title>Projects – Data Analytics/Science Portfolio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -96,11 +96,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -135,8 +135,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-capabilities" id="toc-core-capabilities" class="nav-link active" data-scroll-target="#core-capabilities">Core Capabilities</a></li>
-  <li><a href="#featured-work" id="toc-featured-work" class="nav-link" data-scroll-target="#featured-work">Featured Work</a></li>
+  <li><a href="#featured-case-studies" id="toc-featured-case-studies" class="nav-link active" data-scroll-target="#featured-case-studies">Featured Case Studies</a>
+  <ul class="collapse">
+  <li><a href="#ga4-ecommerce-analytics-purchase-prediction" id="toc-ga4-ecommerce-analytics-purchase-prediction" class="nav-link" data-scroll-target="#ga4-ecommerce-analytics-purchase-prediction">1. GA4 Ecommerce Analytics &amp; Purchase Prediction</a></li>
+  </ul></li>
+  <li><a href="#interactive-data-visualizations" id="toc-interactive-data-visualizations" class="nav-link" data-scroll-target="#interactive-data-visualizations">Interactive Data Visualizations</a></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Analytics &amp; Data Science Portfolio</h1>
+<h1 class="title">Projects</h1>
 </div>
 
 
@@ -162,18 +165,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to my portfolio! I specialize in data analysis, machine learning, and data visualization, transforming complex datasets into actionable business insights.</p>
-<section id="core-capabilities" class="level2">
-<h2 class="anchored" data-anchor-id="core-capabilities">Core Capabilities</h2>
+<section id="featured-case-studies" class="level2">
+<h2 class="anchored" data-anchor-id="featured-case-studies">Featured Case Studies</h2>
+<section id="ga4-ecommerce-analytics-purchase-prediction" class="level3">
+<h3 class="anchored" data-anchor-id="ga4-ecommerce-analytics-purchase-prediction">1. <a href="./ga4-ecommerce-prediction.html">GA4 Ecommerce Analytics &amp; Purchase Prediction</a></h3>
+<p>An end-to-end analysis using <strong>Google BigQuery, SQL, Python, statistical testing (Chi-square/Cramér’s V), and machine learning</strong> to analyze ecommerce funnel drop-offs and predict future purchase conversion.</p>
 <ul>
-<li><strong>Data Analysis &amp; Visualization:</strong> Python (Pandas, Matplotlib, Seaborn), SQL, Tableau / Power BI</li>
-<li><strong>Machine Learning:</strong> Predictive modeling, classification, regression, and model evaluation</li>
-<li><strong>Data Engineering &amp; Workflow:</strong> Git/GitHub, Quarto, reproducible analytical workflows</li>
+<li><strong>Key Outcome:</strong> Logistic Regression achieved <strong>0.888 ROC-AUC</strong> for lead prioritization while eliminating target leakage through time-based feature splitting.</li>
+<li><a href="./ga4-ecommerce-prediction.html">Read Full Case Study →</a></li>
 </ul>
+<hr>
 </section>
-<section id="featured-work" class="level2">
-<h2 class="anchored" data-anchor-id="featured-work">Featured Work</h2>
-<p>Navigate to the <a href="./projects.html">Projects</a> page to explore my case studies, code, and interactive visual outputs.</p>
+</section>
+<section id="interactive-data-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-data-visualizations">Interactive Data Visualizations</h2>
+<p>import pandas as pd import matplotlib.pyplot as plt</p>
+<p>data = { “Funnel Stage”: [“View Item”, “Add to Cart”, “Begin Checkout”, “Purchase”], “Events”: [386068, 58543, 38757, 5692] } df = pd.DataFrame(data)</p>
+<p>fig, ax = plt.subplots(figsize=(7, 4)) ax.bar(df[“Funnel Stage”], df[“Events”], color=“#2b5c8f”) ax.set_ylabel(“Event Count”) ax.set_title(“GA4 Ecommerce Conversion Funnel”) plt.tight_layout() plt.show()</p>
 
 
 </section>

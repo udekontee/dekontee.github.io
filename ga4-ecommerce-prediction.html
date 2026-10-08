@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="U Dekontee Kun">
+<meta name="dcterms.date" content="2026-10-07">
+<meta name="description" content="End-to-end GA4 ecommerce analysis aligning with the 6-step Analytics Process using BigQuery, SQL, Python, and Machine Learning.">
 
-<title>Data Analytics &amp; Data Science Portfolio – Data Analytics/Science Portfolio</title>
+<title>GA4 Ecommerce Analytics &amp; Purchase Prediction – Data Analytics/Science Portfolio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -96,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -135,8 +167,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-capabilities" id="toc-core-capabilities" class="nav-link active" data-scroll-target="#core-capabilities">Core Capabilities</a></li>
-  <li><a href="#featured-work" id="toc-featured-work" class="nav-link" data-scroll-target="#featured-work">Featured Work</a></li>
+  <li><a href="#executive-summary-for-recruiters-hiring-managers" id="toc-executive-summary-for-recruiters-hiring-managers" class="nav-link active" data-scroll-target="#executive-summary-for-recruiters-hiring-managers">Executive Summary (For Recruiters &amp; Hiring Managers)</a></li>
+  <li><a href="#ask-question-business-problem-goals" id="toc-ask-question-business-problem-goals" class="nav-link" data-scroll-target="#ask-question-business-problem-goals">1. Ask Question (Business Problem &amp; Goals)</a></li>
+  <li><a href="#get-data-data-source-storage" id="toc-get-data-data-source-storage" class="nav-link" data-scroll-target="#get-data-data-source-storage">2. Get Data (Data Source &amp; Storage)</a></li>
+  <li><a href="#investigate-data-exploratory-analysis-testing" id="toc-investigate-data-exploratory-analysis-testing" class="nav-link" data-scroll-target="#investigate-data-exploratory-analysis-testing">3. Investigate Data (Exploratory Analysis &amp; Testing)</a>
+  <ul class="collapse">
+  <li><a href="#conversion-funnel-breakdown" id="toc-conversion-funnel-breakdown" class="nav-link" data-scroll-target="#conversion-funnel-breakdown">Conversion Funnel Breakdown</a></li>
+  <li><a href="#statistical-hypothesis-testing" id="toc-statistical-hypothesis-testing" class="nav-link" data-scroll-target="#statistical-hypothesis-testing">Statistical Hypothesis Testing</a></li>
+  </ul></li>
+  <li><a href="#prepare-data-feature-engineering-leakage-prevention" id="toc-prepare-data-feature-engineering-leakage-prevention" class="nav-link" data-scroll-target="#prepare-data-feature-engineering-leakage-prevention">4. Prepare Data (Feature Engineering &amp; Leakage Prevention)</a></li>
+  <li><a href="#analyze-data-machine-learning-modeling" id="toc-analyze-data-machine-learning-modeling" class="nav-link" data-scroll-target="#analyze-data-machine-learning-modeling">5. Analyze Data (Machine Learning Modeling)</a>
+  <ul class="collapse">
+  <li><a href="#feature-importance-standardized-coefficients" id="toc-feature-importance-standardized-coefficients" class="nav-link" data-scroll-target="#feature-importance-standardized-coefficients">Feature Importance (Standardized Coefficients)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -145,14 +188,38 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Analytics &amp; Data Science Portfolio</h1>
-</div>
+<h1 class="title">GA4 Ecommerce Analytics &amp; Purchase Prediction</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">SQL</div>
+    <div class="quarto-category">BigQuery</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Analytics Process</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    End-to-end GA4 ecommerce analysis aligning with the 6-step Analytics Process using BigQuery, SQL, Python, and Machine Learning.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>U Dekontee Kun </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 7, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -162,20 +229,148 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to my portfolio! I specialize in data analysis, machine learning, and data visualization, transforming complex datasets into actionable business insights.</p>
-<section id="core-capabilities" class="level2">
-<h2 class="anchored" data-anchor-id="core-capabilities">Core Capabilities</h2>
+<section id="executive-summary-for-recruiters-hiring-managers" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary-for-recruiters-hiring-managers">Executive Summary (For Recruiters &amp; Hiring Managers)</h2>
 <ul>
-<li><strong>Data Analysis &amp; Visualization:</strong> Python (Pandas, Matplotlib, Seaborn), SQL, Tableau / Power BI</li>
-<li><strong>Machine Learning:</strong> Predictive modeling, classification, regression, and model evaluation</li>
-<li><strong>Data Engineering &amp; Workflow:</strong> Git/GitHub, Quarto, reproducible analytical workflows</li>
+<li><strong>Business Challenge:</strong> Identify where Google Merchandise Store visitors drop off in the conversion funnel and predict future high-intent purchasers.</li>
+<li><strong>Core Approach:</strong> Processed 4.29M events in BigQuery, performed statistical hypothesis testing, and built machine learning models using time-based windowing to prevent data leakage.</li>
+<li><strong>Primary Impact:</strong> Logistic Regression achieved an <strong>0.888 ROC-AUC</strong>, successfully identifying <strong>63% of future purchasers</strong> to optimize targeted marketing spend.</li>
 </ul>
+<hr>
 </section>
-<section id="featured-work" class="level2">
-<h2 class="anchored" data-anchor-id="featured-work">Featured Work</h2>
-<p>Navigate to the <a href="./projects.html">Projects</a> page to explore my case studies, code, and interactive visual outputs.</p>
+<section id="ask-question-business-problem-goals" class="level2">
+<h2 class="anchored" data-anchor-id="ask-question-business-problem-goals">1. Ask Question (Business Problem &amp; Goals)</h2>
+<p>This project addresses key business questions to improve ecommerce conversion performance:</p>
+<ol type="1">
+<li><strong>Funnel Performance:</strong> Where are the primary conversion drop-offs between item view, cart addition, checkout, and purchase?</li>
+<li><strong>Behavioral Impact:</strong> Do purchase rates differ significantly across device categories or traffic channels?</li>
+<li><strong>Engagement Dynamics:</strong> How does engagement intensity differ between buyers and non-buyers?</li>
+<li><strong>Predictive Modeling:</strong> Can past behavioral features accurately predict future purchases without target leakage?</li>
+</ol>
+<hr>
+</section>
+<section id="get-data-data-source-storage" class="level2">
+<h2 class="anchored" data-anchor-id="get-data-data-source-storage">2. Get Data (Data Source &amp; Storage)</h2>
+<ul>
+<li><strong>Source Dataset:</strong> <code>bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*</code> hosted on <strong>Google BigQuery</strong>.</li>
+<li><strong>Scope:</strong> 4,295,584 raw ecommerce events across 270,154 unique users spanning 92 days (Nov 1, 2020 – Jan 31, 2021).</li>
+<li><strong>Environment:</strong> Executed SQL queries via <strong>Google BigQuery</strong> and conducted downstream analysis in <strong>Google Colab (Python)</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="investigate-data-exploratory-analysis-testing" class="level2">
+<h2 class="anchored" data-anchor-id="investigate-data-exploratory-analysis-testing">3. Investigate Data (Exploratory Analysis &amp; Testing)</h2>
+<section id="conversion-funnel-breakdown" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-funnel-breakdown">Conversion Funnel Breakdown</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 30%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funnel Stage</th>
+<th style="text-align: right;">Event Count</th>
+<th>Stage Progression</th>
+<th>Drop-off Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>View Item</strong></td>
+<td style="text-align: right;">386,068</td>
+<td>Baseline</td>
+<td>Highest volume stage</td>
+</tr>
+<tr class="even">
+<td><strong>Add to Cart</strong></td>
+<td style="text-align: right;">58,543</td>
+<td>15.1% of views</td>
+<td><strong>Major conversion drop-off point</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Begin Checkout</strong></td>
+<td style="text-align: right;">38,757</td>
+<td>66.2% of cart additions</td>
+<td>Moderate retention</td>
+</tr>
+<tr class="even">
+<td><strong>Purchase</strong></td>
+<td style="text-align: right;">5,692</td>
+<td>14.6% of checkouts</td>
+<td>Final purchase conversion</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="statistical-hypothesis-testing" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-hypothesis-testing">Statistical Hypothesis Testing</h3>
+<ul>
+<li><strong>Device Category vs.&nbsp;Purchase:</strong> A Chi-Square Test of Independence yielded <span class="math inline">\(p = 0.0130\)</span>. However, Cramér’s V was <span class="math inline">\(0.0047\)</span>, demonstrating that device type has a <strong>negligible practical effect</strong> on conversion.</li>
+<li><strong>Traffic Source vs.&nbsp;Purchase:</strong> Yielded <span class="math inline">\(p \approx 4.51 \times 10^{-83}\)</span> and Cramér’s V of <span class="math inline">\(0.0318\)</span>, indicating traffic source is a stronger driver than device type, though overall association remains moderate.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="prepare-data-feature-engineering-leakage-prevention" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-data-feature-engineering-leakage-prevention">4. Prepare Data (Feature Engineering &amp; Leakage Prevention)</h2>
+<p>To build a valid predictive model without data leakage, behavioral metrics and target outcomes were strictly partitioned across non-overlapping calendar windows:</p>
+<ul>
+<li><strong>Feature Period (Nov 1 – Dec 30, 2020):</strong> Engineered user-level aggregates including engagement event count, page views, and product views.</li>
+<li><strong>Prediction Period (Dec 31, 2020 – Jan 31, 2021):</strong> Evaluated binary purchase outcome (<code>1</code> if purchased in January, <code>0</code> otherwise).</li>
+<li><strong>Imbalance Management:</strong> Out of 176,942 active users during the feature window, only <strong>258 purchased in the prediction window (0.15% target class rate)</strong>. Class weighting was applied to manage this imbalance.</li>
+</ul>
+<hr>
+</section>
+<section id="analyze-data-machine-learning-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="analyze-data-machine-learning-modeling">5. Analyze Data (Machine Learning Modeling)</h2>
+<p>Two binary classification algorithms were evaluated on the imbalanced dataset:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Architecture</th>
+<th style="text-align: right;">Precision</th>
+<th style="text-align: right;">Recall</th>
+<th style="text-align: right;">F1-Score</th>
+<th style="text-align: right;">ROC-AUC</th>
+<th style="text-align: right;">PR-AUC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Logistic Regression (Class-Weighted)</strong></td>
+<td style="text-align: right;"><strong>0.0118</strong></td>
+<td style="text-align: right;"><strong>0.6346</strong></td>
+<td style="text-align: right;"><strong>0.0231</strong></td>
+<td style="text-align: right;"><strong>0.8880</strong></td>
+<td style="text-align: right;"><strong>0.0197</strong></td>
+</tr>
+<tr class="even">
+<td>Random Forest Classifier</td>
+<td style="text-align: right;">0.0006</td>
+<td style="text-align: right;">0.0192</td>
+<td style="text-align: right;">0.0012</td>
+<td style="text-align: right;">0.3472</td>
+<td style="text-align: right;">0.0013</td>
+</tr>
+</tbody>
+</table>
+<section id="feature-importance-standardized-coefficients" class="level3">
+<h3 class="anchored" data-anchor-id="feature-importance-standardized-coefficients">Feature Importance (Standardized Coefficients)</h3>
+<p>```text Engagement Events : +1.7106 (Odds Ratio: 5.53) &lt;– Primary Positive Predictor Product Views : +0.4622 (Odds Ratio: 1.59) Page Views : -0.6491 (Odds Ratio: 0.52)</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
