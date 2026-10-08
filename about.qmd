@@ -1,5 +1,64 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+## Overview
+
+Hi! I am **Dekontee Kun**, an Atlanta-based Software Engineering & Data Analytics Professional holding an M.S. in Information Systems Management. I specialize in building scalable data pipelines, statistical models, and analytical tools using Python, SQL, BigQuery, and JavaScript.
+
+---
+
+## Certifications & Credentials
+
+### Data Science, AI & Machine Learning
+- **Data Science Application** – *WorldQuant University*
+- **Data Science Modeling** – *WorldQuant University*
+- **Build RAG Applications & Develop Generative AI Applications** – *IBM / Coursera*
+- **Generative AI Essentials & Artificial Intelligence Fundamentals** – *IBM / Coursera*
+
+### Data Analytics & Business Intelligence
+- **Google Data Analytics Professional Certificate (v2)** – *Google / Coursera*
+- **Google Business Intelligence Certificate** – *Google / Coursera*
+- **Tableau Visualization Certificate** – *Tableau*
+- **Data Analytics Essentials** – *Cisco Networking Academy*
+
+### Software Engineering & Cloud
+- **Software Engineering Essentials** – *IBM / Coursera*
+- **JavaScript Essentials 1 & 2 (Intermediate OOP)** – *Cisco Networking Academy*
+- **Google Project Management Professional Certificate (v2)** – *Google / Coursera*
+- **AWS Certified Cloud Practitioner** – *Amazon Web Services*
+
+👉 [View & Verify All Digital Badges on Credly](https://www.credly.com/users/u-dekontee-kun)
+
+---
+
+## Education
+
+- **Master of Science in Information Systems Management (Project Management)**  
+  *DeVry University, Keller Graduate School of Management*
+- **Bachelor of Public Administration (Economic Development)**  
+  *African Methodist Episcopal University*
+
+---
+
+## Core Technical Skills
+
+- **Programming & Analysis:** Python (OOP, Pandas, Scikit-learn), JavaScript, SQL, BigQuery, HTML/CSS
+- **Data Engineering & Analytics:** Data Cleaning, Feature Engineering, EDA, Statistical Testing (Chi-Square, Cramér's V)
+- **Visualization & BI:** Tableau, Power BI, Matplotlib, Dashboard Automation
+- **Workflow & Infrastructure:** Git, GitHub, Quarto, Jupyter Notebook, AWS Cloud, Unit Testing
+
+---
+
+## Professional Links & Resume
+
+- **Resume:** [Download Resume PDF](RESUME.pdf)
+- **LinkedIn:** [linkedin.com/in/udkun](https://linkedin.com/in/udkun)
+- **GitHub:** [github.com/udekontee](https://github.com/udekontee)
+- **Medium:** [medium.com/@udekontee](https://medium.com/@udekontee)
+
+---
+
+## My Approach
+
+I structure my analytics work around the **Data Analytics Process**: framing business problems, engineering features from high-volume datasets (such as 10M+ operational records), building predictive models, and translating complex metrics into actionable insights for leadership.
